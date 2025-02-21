@@ -5,7 +5,7 @@ https://docs.astral.sh/uv/getting-started/installation/
 
 ## Install dependencies
 ```bash
-  uv sync
+  uv sync --all-extras --dev
 ```
 
 ## Format
