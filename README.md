@@ -17,3 +17,8 @@ https://docs.astral.sh/uv/getting-started/installation/
 ```bash
   uv run pytest
 ```
+
+## Run
+```bash
+  uv run fastapi dev --reload
+```
