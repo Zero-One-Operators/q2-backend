@@ -29,8 +29,3 @@ async def root():
 
 class Data(BaseModel):
     message: str  # The data class will have a message field
-
-@app.post("/message")
-async def message_route(data: Data):  # Updated parameter name to data
-    print(data.message)  # Print the received message
-    return {"status": f"Your post request was received. The message was {data.message} "}  # Return the message in the response
