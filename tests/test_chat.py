@@ -23,7 +23,8 @@ def patch_datetime_now(monkeypatch):
 def test_endpoint_hello_returns_(patch_datetime_now):
     message = Message(message="Hello World!", timestamp="2021-07-01T12:00:00")
     expected_response = Message(
-        message="Hello from the chat Agent! Your message: " + message.message, timestamp=FAKE_TIME.isoformat()
+        message="Hello from the chat Agent! Your message: " + message.message,
+        timestamp=FAKE_TIME.isoformat(),
     )
 
     response = client.post("/chat", json=message.model_dump())
