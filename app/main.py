@@ -27,5 +27,6 @@ app.add_middleware(
 async def root():
     return {"status": "ok"}
 
+
 class Data(BaseModel):
     message: str  # The data class will have a message field

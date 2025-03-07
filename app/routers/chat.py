@@ -10,9 +10,10 @@ router = APIRouter()
 @router.post("/")
 async def chat(message: Message):
     current_time = datetime.datetime.now()
-    # Testing if param message is received and put back to frontend
+
     response = Message(
-        message="Hello from the chat Agent! Your message: " + message.message , timestamp=current_time.isoformat()
+        message="Hello from the chat Agent! Your message: " + message.message,
+        timestamp=current_time.isoformat(),
     )
 
     return response.model_dump()
